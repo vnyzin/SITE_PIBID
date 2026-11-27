@@ -1,0 +1,23 @@
+/* hero.css — bloco de apresentação (título principal) */
+.hero {
+  padding-block: 2.75rem 3rem;
+  background: var(--color-bg-hero);
+}
+
+.hero__title {
+  margin-top: 1.4rem;
+  font-size: clamp(2rem, 3.611vw, 3.25rem);
+  font-weight: var(--weight-semibold);
+  line-height: 1.35;
+  color: var(--color-navy-900);
+}
+
+/* Cada linha do título fica em sua própria linha, como no Figma */
+.hero__title-line { display: block; }
+
+.hero__text {
+  max-width: 68ch;
+  margin-top: 1.1rem;
+  font-size: 1.125rem;
+  line-height: 1.35;
+}

@@ -1,0 +1,5 @@
+/* container.css — largura máxima e margens laterais do conteúdo */
+.container {
+  width: min(100% - 2 * var(--gutter), var(--container-max));
+  margin-inline: auto;
+}

@@ -1,0 +1,154 @@
+/* ==========================================================================
+   carousel.css — estrutura do carrossel (seletores, trilho, controles).
+   O visual de cada slide fica em activity-slide.css.
+   Os seletores, contadores e bolinhas são criados pelo js/carousel.js
+   a partir dos slides existentes: não precisa editá-los ao adicionar um grupo.
+   ========================================================================== */
+.carousel {
+  padding-block: 2rem 1rem;
+  background: var(--color-bg-carousel);
+  container-type: inline-size; /* permite usar 100cqw (largura da seção, sem a barra de rolagem) */
+}
+
+/* ---------- Cabeçalho do carrossel ---------- */
+.carousel__title {
+  margin-top: 0.35rem;
+  font-size: 1.6875rem;
+  font-weight: var(--weight-semibold);
+  line-height: 1.5;
+  color: var(--color-navy-900);
+}
+
+.carousel__nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 0.9rem;
+}
+
+.carousel__tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.carousel__counter {
+  font-size: 0.8125rem;
+  font-weight: var(--weight-semibold);
+  white-space: nowrap;
+}
+
+/* ---------- Seletores de grupo (botões 01 Grupo 1, 02 Grupo 2...) ---------- */
+.carousel__tab {
+  min-width: 150px;
+  height: 42px;
+  padding: 0 1rem;
+  border: 1px solid var(--color-border-tab);
+  border-radius: var(--radius-sm);
+  background: var(--color-white);
+  font-size: 0.875rem;
+  font-weight: var(--weight-semibold);
+  text-align: left;
+  color: var(--color-slate-600);
+  white-space: pre;
+}
+
+.carousel__tab.is-active {
+  border-color: var(--color-green-700);
+  background: var(--color-green-700);
+  color: var(--color-white);
+}
+
+/* ---------- Trilho horizontal com os slides ---------- */
+.carousel__track {
+  --edge: max(var(--gutter), calc((100cqw - var(--container-max)) / 2));
+
+  position: relative;
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+  padding-inline: var(--edge);
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-padding-inline: var(--edge);
+  scrollbar-width: none;
+  counter-reset: slide;
+}
+
+.carousel__track::-webkit-scrollbar { display: none; }
+
+/* ---------- Controles inferiores ---------- */
+.carousel__controls {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1.25rem;
+}
+
+.carousel__status { font-size: 0.8125rem; }
+
+.carousel__dots {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.carousel__dot {
+  width: 8px;
+  height: 8px;
+  padding: 0;
+  border: 0;
+  border-radius: 4px;
+  background: var(--color-dot);
+  transition: width 0.2s ease, background-color 0.2s ease;
+}
+
+.carousel__dot.is-active {
+  width: 28px;
+  background: var(--color-green-700);
+}
+
+.carousel__buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 16px;
+}
+
+.carousel__button {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 1px solid var(--color-border-control);
+  border-radius: 50%;
+  background: var(--color-white);
+  font-size: 1.5rem;
+  line-height: 1;
+  color: var(--color-slate-600);
+}
+
+.carousel__button--next {
+  border-color: var(--color-green-700);
+  background: var(--color-green-700);
+  color: var(--color-white);
+}
+
+.carousel__button:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+
+@media (max-width: 720px) {
+  .carousel__nav { flex-direction: column; align-items: flex-start; }
+  .carousel__tab { min-width: 0; flex: 1 1 130px; }
+  .carousel__controls { grid-template-columns: 1fr auto; }
+  .carousel__status { display: none; }
+  .carousel__dots { order: -1; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .carousel__dot { transition: none; }
+}

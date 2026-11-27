@@ -1,0 +1,21 @@
+/* typography.css — fonte e cor padrão do texto */
+body {
+  font-family: var(--font-family);
+  font-weight: var(--weight-regular);
+  line-height: 1.5;
+  color: var(--color-slate-600);
+  background: var(--color-white);
+}
+
+/* Link "pular para o conteúdo" (acessibilidade): só aparece com o foco do teclado */
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -4rem;
+  z-index: 10;
+  padding: 0.5rem 1rem;
+  background: var(--color-navy-900);
+  color: var(--color-white);
+  border-radius: var(--radius-sm);
+}
+.skip-link:focus { top: 1rem; }

@@ -1,0 +1,23 @@
+/* header.css — cabeçalho institucional com os três logos */
+.site-header { background: var(--color-white); }
+
+.site-header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  min-height: 156px;
+  border-bottom: 1px solid var(--color-border-header);
+}
+
+.site-header__logo { width: auto; object-fit: contain; }
+.site-header__logo--upe   { height: 96px; }
+.site-header__logo--pibid { height: 124px; }
+.site-header__logo--capes { height: 100px; }
+
+@media (max-width: 720px) {
+  .site-header__inner { min-height: 112px; }
+  .site-header__logo--upe   { height: 56px; }
+  .site-header__logo--pibid { height: 72px; }
+  .site-header__logo--capes { height: 58px; }
+}

@@ -1,0 +1,43 @@
+/* footer.css — rodapé institucional */
+.site-footer {
+  padding-block: 2.4rem 3rem;
+  background: var(--color-navy-900);
+  color: var(--color-white);
+}
+
+.site-footer__inner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.site-footer__name {
+  font-size: 1.5625rem;
+  font-weight: var(--weight-semibold);
+  line-height: 1.5;
+}
+
+.site-footer__course,
+.site-footer__program {
+  font-size: 0.875rem;
+  color: var(--color-footer-text);
+}
+
+.site-footer__course { margin-top: 0.4rem; }
+
+.site-footer__institution { text-align: right; }
+
+.site-footer__university {
+  font-size: 1rem;
+  font-weight: var(--weight-medium);
+}
+
+.site-footer__program {
+  margin-top: 0.6rem;
+  font-size: 0.75rem;
+}
+
+@media (max-width: 720px) {
+  .site-footer__institution { text-align: left; }
+}

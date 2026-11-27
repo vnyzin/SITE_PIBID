@@ -1,0 +1,90 @@
+/* ==========================================================================
+   photo-gallery.css — galeria de 3 fotos (1 principal + 2 complementares).
+   Cada .photo mostra um <img> quando a foto existe, ou o
+   .photo__placeholder ("Insira a foto...") enquanto ela não foi enviada.
+   ========================================================================== */
+.photo-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  align-content: start;
+}
+
+.photo-gallery__caption {
+  grid-column: 1 / -1;
+  margin-top: -0.25rem;
+  font-size: 0.75rem;
+}
+
+/* ---------- Foto ---------- */
+.photo {
+  position: relative;
+  min-height: 8.25rem;           /* 132px: fotos complementares */
+  overflow: hidden;
+  border-radius: var(--radius-md);
+  background: var(--color-photo-a-bg);
+}
+
+.photo--main {
+  grid-column: 1 / -1;
+  min-height: 16.5rem;           /* 264px: foto principal */
+  background: var(--color-photo-main-bg);
+}
+
+.photo--a { background: var(--color-photo-a-bg); }
+.photo--b { background: var(--color-photo-b-bg); }
+
+.photo__img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ---------- Placeholder ("Insira uma foto...") ---------- */
+.photo__placeholder {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 0.75rem;
+  height: 100%;
+  min-height: inherit;
+  padding: 1.25rem;
+}
+
+.photo__label {
+  font-size: 0.625rem;
+  font-weight: var(--weight-semibold);
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  color: var(--color-photo-main-text);
+}
+
+.photo__number {
+  font-size: 1.625rem;
+  line-height: 1.5;
+  color: var(--color-photo-number);
+}
+
+.photo__hint {
+  font-size: 0.75rem;
+  font-weight: var(--weight-medium);
+}
+
+/* Foto principal tem tipografia maior */
+.photo--main .photo__placeholder { padding: 1.5rem; }
+.photo--main .photo__number {
+  margin-block: auto;
+  font-size: 2.75rem;
+  color: var(--color-photo-main-number);
+}
+.photo--main .photo__hint {
+  font-size: 0.875rem;
+  color: var(--color-photo-main-text);
+}
+
+@media (max-width: 520px) {
+  .photo-gallery { grid-template-columns: minmax(0, 1fr); }
+  .photo--main { min-height: 12rem; }
+}

@@ -1,0 +1,22 @@
+/* ==========================================================================
+   main.css — ponto de entrada de todo o CSS do site PIBID.
+   Para criar um novo bloco: crie o arquivo em components/ e adicione
+   um @import abaixo, na seção "Componentes".
+   ========================================================================== */
+
+/* Base (tokens, reset e tipografia) */
+@import url("base/variables.css");
+@import url("base/reset.css");
+@import url("base/typography.css");
+
+/* Layout */
+@import url("layout/container.css");
+
+/* Componentes (um arquivo por bloco da página) */
+@import url("components/header.css");
+@import url("components/hero.css");
+@import url("components/eyebrow.css");
+@import url("components/carousel.css");
+@import url("components/activity-slide.css");
+@import url("components/photo-gallery.css");
+@import url("components/footer.css");
