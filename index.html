@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PIBID Matemática e Computação • Universidade de Pernambuco</title>
+  <meta name="description" content="Trabalhos desenvolvidos no PIBID de Matemática e Computação da Universidade de Pernambuco, em parceria com escolas públicas.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="css/main.css">
+  <script src="js/carousel.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
+
+  <!-- ===================== BLOCO: CABEÇALHO ===================== -->
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <img class="site-header__logo site-header__logo--upe" src="assets/img/logo-upe.png" alt="Universidade de Pernambuco">
+      <img class="site-header__logo site-header__logo--pibid" src="assets/img/logo-pibid.png" alt="PIBID – Programa Institucional de Bolsa de Iniciação à Docência">
+      <img class="site-header__logo site-header__logo--capes" src="assets/img/logo-capes.png" alt="CAPES">
+    </div>
+  </header>
+
+  <main id="conteudo">
+
+    <!-- ===================== BLOCO: APRESENTAÇÃO ===================== -->
+    <section class="hero">
+      <div class="container">
+        <p class="eyebrow eyebrow--lg">Ensino, partilha e descoberta</p>
+        <h1 class="hero__title">
+          <span class="hero__title-line">Matemática e computação</span>
+          <span class="hero__title-line">que conectam saberes.</span>
+        </h1>
+        <p class="hero__text">
+          Conheça os trabalhos desenvolvidos no PIBID e os encontros entre a universidade e a escola pública, em quatro grupos de atividades.
+        </p>
+      </div>
+    </section>
+
+    <!-- ===================== BLOCO: CARROSSEL DE ATIVIDADES ===================== -->
+    <section class="carousel" data-carousel aria-labelledby="carrossel-titulo">
+      <div class="container">
+        <p class="eyebrow">Explore os trabalhos</p>
+        <h2 class="carousel__title" id="carrossel-titulo">Quatro grupos, muitas descobertas.</h2>
+
+        <div class="carousel__nav">
+          <!-- Botões "01 Grupo 1…" criados pelo js/carousel.js -->
+          <div class="carousel__tabs" role="group" aria-label="Escolher grupo" data-carousel-tabs></div>
+          <p class="carousel__counter" data-carousel-counter aria-hidden="true">01 / 04</p>
+        </div>
+      </div>
+
+      <!-- SLIDES: cada <article class="slide"> é uma atividade.
+           Para adicionar uma escola, copie templates/slide-atividade.html
+           e cole logo antes do comentário "FIM DOS SLIDES". -->
+      <div class="carousel__track" data-carousel-track tabindex="0" aria-label="Atividades dos grupos">
+
+        <!-- ===================== GRUPO 1 ===================== -->
+        <article class="slide" data-slide>
+          <div class="slide__info">
+            <p class="slide__eyebrow" data-slide-label>Grupo 1</p>
+            <h3 class="slide__title">Título da atividade</h3>
+
+            <p class="slide__school">
+              <span class="slide__school-label">Escola</span>
+              <span class="slide__school-name">Nome da escola</span>
+            </p>
+
+            <p class="slide__description">
+              Apresente aqui a atividade desenvolvida pelo grupo: a proposta, os conteúdos de matemática e computação trabalhados e como foi a participação dos estudantes.
+            </p>
+            <p class="slide__note">
+              Um espaço para compartilhar experiências, aprendizados e descobertas em sala de aula.
+            </p>
+          </div>
+
+          <div class="photo-gallery">
+            <!-- Para usar uma foto real, troque o <div class="photo__placeholder"> inteiro por:
+                 <img class="photo__img" src="assets/img/atividades/NOME-DA-ESCOLA/foto-1.jpg" alt="Descreva a foto"> -->
+            <figure class="photo photo--main">
+              <div class="photo__placeholder">
+                <span class="photo__label">Registros da atividade</span>
+                <span class="photo__number">01</span>
+                <span class="photo__hint">Insira a foto principal da atividade</span>
+              </div>
+            </figure>
+
+            <figure class="photo photo--a">
+              <div class="photo__placeholder">
+                <span class="photo__number">02</span>
+                <span class="photo__hint">Insira uma foto da atividade</span>
+              </div>
+            </figure>
+
+            <figure class="photo photo--b">
+              <div class="photo__placeholder">
+                <span class="photo__number">03</span>
+                <span class="photo__hint">Insira uma foto da atividade</span>
+              </div>
+            </figure>
+
+            <p class="photo-gallery__caption">Galeria reservada para os registros de cada grupo.</p>
+          </div>
+        </article>
+
+        <!-- ===================== GRUPO 2 ===================== -->
+        <article class="slide" data-slide>
+          <div class="slide__info">
+            <p class="slide__eyebrow" data-slide-label>Grupo 2</p>
+            <h3 class="slide__title">Título da atividade</h3>
+
+            <p class="slide__school">
+              <span class="slide__school-label">Escola</span>
+              <span class="slide__school-name">Nome da escola</span>
+            </p>
+
+            <p class="slide__description">
+              Apresente aqui a atividade desenvolvida pelo grupo: a proposta, os conteúdos de matemática e computação trabalhados e como foi a participação dos estudantes.
+            </p>
+            <p class="slide__note">
+              Um espaço para compartilhar experiências, aprendizados e descobertas em sala de aula.
+            </p>
+          </div>
+
+          <div class="photo-gallery">
+            <!-- Para usar uma foto real, troque o <div class="photo__placeholder"> inteiro por:
+                 <img class="photo__img" src="assets/img/atividades/NOME-DA-ESCOLA/foto-1.jpg" alt="Descreva a foto"> -->
+            <figure class="photo photo--main">
+              <div class="photo__placeholder">
+                <span class="photo__label">Registros da atividade</span>
+                <span class="photo__number">01</span>
+                <span class="photo__hint">Insira a foto principal da atividade</span>
+              </div>
+            </figure>
+
+            <figure class="photo photo--a">
+              <div class="photo__placeholder">
+                <span class="photo__number">02</span>
+                <span class="photo__hint">Insira uma foto da atividade</span>
+              </div>
+            </figure>
+
+            <figure class="photo photo--b">
+              <div class="photo__placeholder">
+                <span class="photo__number">03</span>
+                <span class="photo__hint">Insira uma foto da atividade</span>
+              </div>
+            </figure>
+
+            <p class="photo-gallery__caption">Galeria reservada para os registros de cada grupo.</p>
+          </div>
+        </article>
+
+        <!-- ===================== GRUPO 3 ===================== -->
+        <article class="slide" data-slide>
+          <div class="slide__info">
+            <p class="slide__eyebrow" data-slide-label>Grupo 3</p>
+            <h3 class="slide__title">Título da atividade</h3>
+
+            <p class="slide__school">
+              <span class="slide__school-label">Escola</span>
+              <span class="slide__school-name">Nome da escola</span>
+            </p>
+
+            <p class="slide__description">
+              Apresente aqui a atividade desenvolvida pelo grupo: a proposta, os conteúdos de matemática e computação trabalhados e como foi a participação dos estudantes.
+            </p>
+            <p class="slide__note">
+              Um espaço para compartilhar experiências, aprendizados e descobertas em sala de aula.
+            </p>
+          </div>
+
+          <div class="photo-gallery">
+            <!-- Para usar uma foto real, troque o <div class="photo__placeholder"> inteiro por:
+                 <img class="photo__img" src="assets/img/atividades/NOME-DA-ESCOLA/foto-1.jpg" alt="Descreva a foto"> -->
+            <figure class="photo photo--main">
+              <div class="photo__placeholder">
+                <span class="photo__label">Registros da atividade</span>
+                <span class="photo__number">01</span>
+                <span class="photo__hint">Insira a foto principal da atividade</span>
+              </div>
+            </figure>
+
+            <figure class="photo photo--a">
+              <div class="photo__placeholder">
+                <span class="photo__number">02</span>
+                <span class="photo__hint">Insira uma foto da atividade</span>
+              </div>
+            </figure>
+
+            <figure class="photo photo--b">
+              <div class="photo__placeholder">
+                <span class="photo__number">03</span>
+                <span class="photo__hint">Insira uma foto da atividade</span>
+              </div>
+            </figure>
+
+            <p class="photo-gallery__caption">Galeria reservada para os registros de cada grupo.</p>
+          </div>
+        </article>
+
+        <!-- ===================== GRUPO 4 ===================== -->
+        <article class="slide" data-slide>
+          <div class="slide__info">
+            <p class="slide__eyebrow" data-slide-label>Grupo 4</p>
+            <h3 class="slide__title">Título da atividade</h3>
+
+            <p class="slide__school">
+              <span class="slide__school-label">Escola</span>
+              <span class="slide__school-name">Nome da escola</span>
+            </p>
+
+            <p class="slide__description">
+              Apresente aqui a atividade desenvolvida pelo grupo: a proposta, os conteúdos de matemática e computação trabalhados e como foi a participação dos estudantes.
+            </p>
+            <p class="slide__note">
+              Um espaço para compartilhar experiências, aprendizados e descobertas em sala de aula.
+            </p>
+          </div>
+
+          <div class="photo-gallery">
+            <!-- Para usar uma foto real, troque o <div class="photo__placeholder"> inteiro por:
+                 <img class="photo__img" src="assets/img/atividades/NOME-DA-ESCOLA/foto-1.jpg" alt="Descreva a foto"> -->
+            <figure class="photo photo--main">
+              <div class="photo__placeholder">
+                <span class="photo__label">Registros da atividade</span>
+                <span class="photo__number">01</span>
+                <span class="photo__hint">Insira a foto principal da atividade</span>
+              </div>
+            </figure>
+
+            <figure class="photo photo--a">
+              <div class="photo__placeholder">
+                <span class="photo__number">02</span>
+                <span class="photo__hint">Insira uma foto da atividade</span>
+              </div>
+            </figure>
+
+            <figure class="photo photo--b">
+              <div class="photo__placeholder">
+                <span class="photo__number">03</span>
+                <span class="photo__hint">Insira uma foto da atividade</span>
+              </div>
+            </figure>
+
+            <p class="photo-gallery__caption">Galeria reservada para os registros de cada grupo.</p>
+          </div>
+        </article>
+
+        <!-- ===================== FIM DOS SLIDES ===================== -->
+      </div>
+
+      <div class="container carousel__controls">
+        <p class="carousel__status" data-carousel-status aria-live="polite">Grupo 1 de 4</p>
+        <div class="carousel__dots" data-carousel-dots></div>
+        <div class="carousel__buttons">
+          <button class="carousel__button" type="button" data-carousel-prev aria-label="Grupo anterior">←</button>
+          <button class="carousel__button carousel__button--next" type="button" data-carousel-next aria-label="Próximo grupo">→</button>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================== BLOCO: RODAPÉ ===================== -->
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <div class="site-footer__brand">
+        <p class="site-footer__name">PIBID</p>
+        <p class="site-footer__course">Matemática e Computação</p>
+      </div>
+      <div class="site-footer__institution">
+        <p class="site-footer__university">Universidade de Pernambuco</p>
+        <p class="site-footer__program">Programa Institucional de Bolsa de Iniciação à Docência</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
